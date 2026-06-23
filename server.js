@@ -33,6 +33,9 @@ pool.connect()
 
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("AptiMaster Backend is Running 🚀");
+});
 const path = require("path");
 
 app.use(express.static(path.join(__dirname, "..")));
